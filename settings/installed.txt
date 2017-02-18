@@ -1,0 +1,6 @@
+GsonFormat
+Time Tracker Plugin
+com.nvinayshetty.DTOnator
+com.wakatime.intellij.plugin
+mobi.hsz.idea.gitignore
+com.crashlytics.tools.androidstudio
