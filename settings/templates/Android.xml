@@ -1,0 +1,21 @@
+<templateSet group="Android">
+  <template name="permdialog" value="private void show$permisssionName$PermissionRequestDialog() {&#10;        new AlertDialog.Builder($context$)&#10;                .setTitle($titleId$)&#10;                .setMessage($messageId$)&#10;                .setPositiveButton($okId$, new DialogInterface.OnClickListener() {&#10;&#10;                    @Override&#10;                    public void onClick(DialogInterface dialog, int which) {&#10;                        ActivityCompat.requestPermissions($context$,&#10;                                new String[]{$permission$},&#10;                                $requestCode$);&#10;                    }&#10;                })&#10;                .setNegativeButton($cancelId$, new DialogInterface.OnClickListener() {&#10;&#10;                    @Override&#10;                    public void onClick(DialogInterface dialog, int which) {&#10;                        $cancelImp$&#10;                    }&#10;                })&#10;                .show();&#10;    }" description="Adds a request permission dialog method" toReformat="true" toShortenFQNames="true">
+    <variable name="permisssionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="context" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="titleId" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="messageId" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="okId" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="permission" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="requestCode" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cancelId" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="cancelImp" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+</templateSet>

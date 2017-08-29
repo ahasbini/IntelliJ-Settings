@@ -1,17 +1,21 @@
 <templateSet group="AndroidLog">
   <template name="logt" value="private static final String TAG = $className$.class.getSimpleName();" description="A static logtag with your current classname" toReformat="true" toShortenFQNames="true">
     <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
   </template>
   <template name="logm" value="android.util.Log.i(TAG, &quot;$METHOD_NAME$() called with: &quot; +  $args$);" description="Log method name and its arguments" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="args" expression="groovyScript(&quot;'\&quot;' + _1.collect { it + ' = [\&quot; + ' + it + ' + \&quot;]'}.join(', ') + '\&quot;'&quot;, methodParameters())" defaultValue="" alwaysStopAt="false" />
-    <context />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
   </template>
   <template name="logce" value="Logger.LogE(TAG, &quot;$METHOD_NAME$: $content$&quot;, $exception$);" description="Log.e(TAG, String, Exception)" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="exception" expression="" defaultValue="e" alwaysStopAt="false" />
+    <variable name="exception" expression="variableOfType(&quot;java.lang.Throwable&quot;)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
@@ -26,7 +30,7 @@
   <template name="logcw" value="Logger.LogW(TAG, &quot;$METHOD_NAME$: $content$&quot;, $exception$);" description="Log.w(TAG, String, Exception)" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="exception" expression="" defaultValue="e" alwaysStopAt="false" />
+    <variable name="exception" expression="variableOfType(&quot;java.lang.Throwable&quot;)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>

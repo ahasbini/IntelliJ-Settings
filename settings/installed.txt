@@ -1,6 +1,10 @@
+BashSupport
+Gradle View
 GsonFormat
 Time Tracker Plugin
+com.crashlytics.tools.androidstudio
 com.nvinayshetty.DTOnator
+com.vladsch.idea.multimarkdown
 com.wakatime.intellij.plugin
 mobi.hsz.idea.gitignore
-com.crashlytics.tools.androidstudio
+org.intellij.plugins.markdown
